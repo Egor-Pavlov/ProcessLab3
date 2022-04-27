@@ -50,6 +50,19 @@ namespace ProcessLab3
             double t30 = 0;
             double t21 = 0;
 
+            double T0 = 0;
+            double T1 = 0;
+            double T2 = 0;
+            double T3 = 0;
+            
+
+
+            if (L01 >= L21 || L13 >= L30 )
+            {
+                MessageBox.Show("Данные некорректны", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
+
             do
             {
                 t01 = (-1 / L01) * Math.Log(R.NextDouble());
@@ -103,10 +116,34 @@ namespace ProcessLab3
                 }
 
                 chart1.Series[0].Points.AddXY(T, S);
+                int count = chart1.Series[0].Points.Count;
+                if (chart1.Series[0].Points.Count > 1)
+                {
+                    if(chart1.Series[0].Points[count - 2].YValues[0] == 0)
+                    {
+                        T0 += (chart1.Series[0].Points[count - 1].XValue - chart1.Series[0].Points[count - 2].XValue);
+                    }
+                    else if (chart1.Series[0].Points[count - 2].YValues[0] == 1)
+                    {
+                        T1 += (chart1.Series[0].Points[count - 1].XValue - chart1.Series[0].Points[count - 2].XValue);
+                    }
+                    else if (chart1.Series[0].Points[count - 2].YValues[0] == 2)
+                    {
+                        T2 += (chart1.Series[0].Points[count - 1].XValue - chart1.Series[0].Points[count - 2].XValue);
+                    }
+                    else if (chart1.Series[0].Points[count - 2].YValues[0] == 3)
+                    {
+                        T3 += (chart1.Series[0].Points[count - 1].XValue - chart1.Series[0].Points[count - 2].XValue);
+                    }
+                }
 
 
             } while (T <= TK);
 
+            this.T0.Text = "S0: " + Math.Round(T0, 4).ToString();
+            this.T1.Text = "S1: " + Math.Round(T1, 4).ToString();
+            this.T2.Text = "S2: " + Math.Round(T2, 4).ToString();
+            this.T3.Text = "S3: " + Math.Round(T3, 4).ToString();
         }
 
 

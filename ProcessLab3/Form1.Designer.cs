@@ -48,6 +48,10 @@ namespace ProcessLab3
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Tk = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.T0 = new System.Windows.Forms.Label();
+            this.T3 = new System.Windows.Forms.Label();
+            this.T2 = new System.Windows.Forms.Label();
+            this.T1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -221,11 +225,55 @@ namespace ProcessLab3
             this.label9.TabIndex = 18;
             this.label9.Text = "Tk";
             // 
+            // T0
+            // 
+            this.T0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.T0.AutoSize = true;
+            this.T0.Location = new System.Drawing.Point(1004, 438);
+            this.T0.Name = "T0";
+            this.T0.Size = new System.Drawing.Size(25, 17);
+            this.T0.TabIndex = 20;
+            this.T0.Text = "S0";
+            // 
+            // T3
+            // 
+            this.T3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.T3.AutoSize = true;
+            this.T3.Location = new System.Drawing.Point(1004, 521);
+            this.T3.Name = "T3";
+            this.T3.Size = new System.Drawing.Size(25, 17);
+            this.T3.TabIndex = 21;
+            this.T3.Text = "S3";
+            // 
+            // T2
+            // 
+            this.T2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.T2.AutoSize = true;
+            this.T2.Location = new System.Drawing.Point(1004, 491);
+            this.T2.Name = "T2";
+            this.T2.Size = new System.Drawing.Size(25, 17);
+            this.T2.TabIndex = 22;
+            this.T2.Text = "S2";
+            // 
+            // T1
+            // 
+            this.T1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.T1.AutoSize = true;
+            this.T1.Location = new System.Drawing.Point(1004, 464);
+            this.T1.Name = "T1";
+            this.T1.Size = new System.Drawing.Size(25, 17);
+            this.T1.TabIndex = 23;
+            this.T1.Text = "S1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 660);
+            this.Controls.Add(this.T1);
+            this.Controls.Add(this.T2);
+            this.Controls.Add(this.T3);
+            this.Controls.Add(this.T0);
             this.Controls.Add(this.Tk);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.chart1);
@@ -268,6 +316,10 @@ namespace ProcessLab3
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.MaskedTextBox Tk;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label T0;
+        private System.Windows.Forms.Label T3;
+        private System.Windows.Forms.Label T2;
+        private System.Windows.Forms.Label T1;
     }
 }
 
